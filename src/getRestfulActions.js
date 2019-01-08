@@ -1,10 +1,11 @@
-import restfulActionTypes from './restfulActionTypes'
+import 'babel-polyfill'
 import snakeCaseToCamelCase from './utils/snakeCaseToCamelCase'
 
-const getRestfulActions = () => {
+const getRestfulActions = (restfulActionTypes) => {
   const o = {}
-  const func = (action, payload) => ({ type: action, payload: payload })
-  restfulActionTypes.forEach((t) => { o[snakeCaseToCamelCase(t)] = func.bind({}) })
+  Object.keys(restfulActionTypes).forEach((k) => {
+    o[snakeCaseToCamelCase(k)] = (payload) => ({ type: restfulActionTypes[k], payload: payload })
+  })
   return o
 }
 
