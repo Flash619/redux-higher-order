@@ -1,0 +1,31 @@
+{
+  "name": "redux-higher-order",
+  "version": "1.0.0",
+  "description": "A set of various higher-order functions for react-redux, redux, and redux-observable.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node node_modules/babel-cli/bin/babel.js --presets es2015 -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flash619/redux-higher-order.git"
+  },
+  "keywords": [
+    "redux",
+    "react",
+    "observable",
+    "higher",
+    "order",
+    "abstraction"
+  ],
+  "author": "Travis Truttschel (Flash619)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.1.18"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
